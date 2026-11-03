@@ -58,14 +58,16 @@ def verify_proof(proof, manifest_bytes, expected_did=AUTHOR_DID, source_dir=None
         root = Path(source_dir).resolve()
         base = ["git", "--git-dir=" + str(root / ".git"), "--work-tree=" + str(root)]
         commit = manifest["source_commit"]
-        tree = subprocess.check_output(base + ["rev-parse", commit + "^{tree}"], text=True).strip()
+        tree = subprocess.check_output(base + ["rev-parse", commit + "^{tree}"], text=True,
+                                       creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0)).strip()
         if tree != manifest["source_tree"]:
             raise ValueError("Source tree mismatch.")
         for name, entry in manifest["files"].items():
             path = Path(name)
             if path.is_absolute() or ".." in path.parts or "\\" in name or name.startswith("-"):
                 raise ValueError("Invalid manifest file path.")
-            raw = subprocess.check_output(base + ["show", commit + ":" + name])
+            raw = subprocess.check_output(base + ["show", commit + ":" + name],
+                                          creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
             if len(raw) != entry["bytes"] or hashlib.sha256(raw).hexdigest() != entry["sha256"]:
                 raise ValueError("Source file mismatch: " + name)
     return {"signature_valid": True, "author_did": expected_did,

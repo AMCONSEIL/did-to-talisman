@@ -35,6 +35,8 @@ If the repository was cloned with Git, also verify all source file hashes in the
 
 **.\.venv\Scripts\python.exe verify_attribution.py --check-source**
 
+The signed manifest file is preserved byte-for-byte by .gitattributes; its own line endings are part of its signed digest.
+
 The manifest uses **Git blob bytes**. Windows launchers may be exported with CRLF according to .gitattributes; the Git-source check reads the committed blobs rather than a platform-normalized working copy.
 
 ## Scope and limits
