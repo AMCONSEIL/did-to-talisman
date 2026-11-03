@@ -53,7 +53,6 @@ Les tests utilisent deux vecteurs **publics** de la RFC 8032, jamais une clé ut
 
 Un test réel par un autre utilisateur dans Talisman reste nécessaire avant une version stable. Cette publication permet précisément de recueillir ces retours. Ce kit prépare le wallet ; FLOP Chat n'est pas encore inclus. Ni l'installation ni la conversion ne publient ou ne signent ce projet sous le DID de l'auteur.
 
-Auteur : **Julien / AMCONSEIL**
 DID : **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 Licence : [MIT](LICENSE).
 

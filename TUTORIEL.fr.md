@@ -2,7 +2,6 @@
 
 [English](TUTORIAL.md) · [Accueil](README.fr.md)
 
-Auteur : **Julien / AMCONSEIL**
 DID d'auteur : **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 
 ## 1. Choisir son parcours, sans supposer un format

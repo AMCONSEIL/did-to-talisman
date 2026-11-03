@@ -1,7 +1,5 @@
 # Author and signed version attribution
 
-Author / porteur : **Julien — AMCONSEIL**
-GitHub: https://github.com/AMCONSEIL
 Author DID: **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 
 This is a personal community contribution. The author DID is not a default conversion identity; each user provides their own DID.

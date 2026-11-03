@@ -4,10 +4,7 @@
   "private": true,
   "description": "Local encrypted Ed25519 did:key export for Talisman",
   "license": "MIT",
-  "author": {
-    "name": "Julien / AMCONSEIL",
-    "url": "https://github.com/AMCONSEIL"
-  },
+  "author": "did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD",
   "authorDid": "did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD",
   "engines": {
     "node": ">=22"

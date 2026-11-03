@@ -2,7 +2,6 @@
 
 [Français](TUTORIEL.fr.md) · [Home](README.md)
 
-Author: **Julien / AMCONSEIL**
 Author DID: **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 
 ## 1. Choose a path without assuming a backup format

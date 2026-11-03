@@ -47,7 +47,6 @@ Tests use **public RFC 8032 fixtures only**, never the author's key. Never use f
 
 An independent real Talisman user test is still required before a stable release. This public test version is intended to collect that feedback. FLOP Chat is not yet included. Running setup/conversion neither publishes nor signs a release under the author's DID.
 
-Author: **Julien / AMCONSEIL**
 Author DID: **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 License: [MIT](LICENSE).
 
