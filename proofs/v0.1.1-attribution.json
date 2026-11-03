@@ -1,0 +1,10 @@
+{
+  "schema": "did-to-talisman-attribution-proof-v1",
+  "author_did": "did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD",
+  "signature_algorithm": "Ed25519",
+  "signature_wrapper": "substrate-bytes",
+  "message_encoding": "UTF-8",
+  "message_utf8": "DID-TO-TALISMAN-AUTHORSHIP-V1\n{\n  \"author_did\": \"did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD\",\n  \"project\": \"did-to-talisman\",\n  \"purpose\": \"I attest this project contribution under my personal DID.\",\n  \"repository\": \"https://github.com/AMCONSEIL/did-to-talisman\",\n  \"scope\": \"Only the source files listed in this manifest at the identified commit.\",\n  \"source_commit\": \"8c35ee3f089c26137f81932ff87893c6bf0d5206\",\n  \"source_manifest_sha256\": \"c609c92aca03495735e698d62151b517dd329a52dabf41b25a78c52f0ed51b37\",\n  \"source_tree\": \"2b66feb29772b385c23853903a102497efb65476\",\n  \"version\": \"0.1.1\"\n}\n",
+  "manifest_sha256": "c609c92aca03495735e698d62151b517dd329a52dabf41b25a78c52f0ed51b37",
+  "signature_hex": "0x1dc4fb5e1696e402aaf1a32ea680a9085812f1114c19369217191f3affb7e9eab3a1faa7d8a7377a74dfbe900b4f761bfb2ba35d297cde233c821e6b8dcf330b"
+}

@@ -47,6 +47,9 @@ Auteur : **Julien / AMCONSEIL**
 DID : **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 Licence : [MIT](LICENSE).
 
+**Attribution signée :** [preuve vérifiable avec le DID personnel](IDENTITY.md), pour la version 0.1.1 au commit 8c35ee3. La signature ne constitue pas un audit de sécurité.
+
+
 ## Autres systèmes
 
 Le code utilise Python/Tk et Node sans chemin Windows imposé. Linux/macOS : installer Python 3.11+ avec Tk et Node 22+, créer .venv avec **python3 -m venv .venv**, puis exécuter **.venv/bin/python -m pip install --require-hashes --only-binary=:all: -r requirements.lock.txt**, **npm ci --ignore-scripts --no-audit --no-fund**, puis **.venv/bin/python did_talisman.py --lang fr**. Ces plateformes ne sont pas encore recettées ; les lanceurs .cmd sont réservés à Windows.

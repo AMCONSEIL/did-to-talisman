@@ -43,6 +43,9 @@ Author: **Julien / AMCONSEIL**
 Author DID: **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 License: [MIT](LICENSE).
 
+**Signed attribution:** [verifiable personal DID proof](IDENTITY.md), covering version 0.1.1 at commit 8c35ee3. This signature is not a security audit.
+
+
 ## Other systems
 
 The Python/Tk and Node code has no fixed Windows paths. On Linux/macOS, install Python 3.11+ with Tk and Node 22+, create the environment with **python3 -m venv .venv**, run **.venv/bin/python -m pip install --require-hashes --only-binary=:all: -r requirements.lock.txt**, **npm ci --ignore-scripts --no-audit --no-fund**, then **.venv/bin/python did_talisman.py --lang en**. These platforms have not yet been acceptance-tested; .cmd launchers are Windows-only.

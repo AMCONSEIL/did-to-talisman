@@ -31,3 +31,9 @@ Node: exact versions and integrity in package-lock.json, lifecycle scripts disab
 .venv, node_modules, validation.local, archives and wallet/key files are excluded from source delivery. Tests clean up only their own temporary public fixture files. Runtime does not delete or overwrite backups/exports.
 
 Original personal tools are preserved. Rollback for this isolated addition is to stop using its launchers; existing tools continue to work.
+
+## Attribution proof checks
+
+The original 17 importer/UI tests are supplemented by 7 public-fixture attribution tests: raw and Substrate-wrapped Ed25519 signatures, modified message, modified manifest, other identity, altered signature and another repository.
+
+The actual personal DID signature was verified against the exact statement and all 24 Git source blobs of commit 8c35ee3f089c26137f81932ff87893c6bf0d5206. This proof does not alter the importer or replace its independent real user test.

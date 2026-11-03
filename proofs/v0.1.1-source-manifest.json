@@ -1,0 +1,108 @@
+{
+  "author_did": "did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD",
+  "byte_representation": "git-blob",
+  "files": {
+    ".gitattributes": {
+      "bytes": 153,
+      "sha256": "bb1cfd315dcd24b1a84318e5208c1ecb50f9044522992b78f44f64b5227e14fb"
+    },
+    ".gitignore": {
+      "bytes": 308,
+      "sha256": "a9a591f5dde4e42ea26307435238a26161f8d4194339430b3693db54ed3883c7"
+    },
+    "IDENTITY.md": {
+      "bytes": 1733,
+      "sha256": "eddb7b932c08bb4d4e1c727549ef62479a9905d9a02afa2dd48fa54970db2d73"
+    },
+    "INSTALLER_WINDOWS.cmd": {
+      "bytes": 197,
+      "sha256": "392f219de33225e02bd15844c42ac5f62244c81bc626de7580a7a7f93aeaa52e"
+    },
+    "INSTALLER_WINDOWS.ps1": {
+      "bytes": 1688,
+      "sha256": "806d8730cdbc8e22374eb6631186b4fbaca89fd631abddc63cb88f8eb197b20a"
+    },
+    "LANCER.cmd": {
+      "bytes": 239,
+      "sha256": "9143c0cb4c3c22bdd86a4b7cc0461062cf47aeb41297245920b341a1006f630f"
+    },
+    "LICENSE": {
+      "bytes": 1144,
+      "sha256": "272f2683263aae0ce6799ef9031a1a5d4f7b4db88eef28eaecb5976ee410354e"
+    },
+    "README.fr.md": {
+      "bytes": 3855,
+      "sha256": "3b1fe774bd4e166d78c7f2b741d74c2799b6d3b0fcdee53872c035ec65a5c8e2"
+    },
+    "README.md": {
+      "bytes": 3396,
+      "sha256": "dad25e6b9b8d37bbcabdd88977d047180b8e51661212c8cf94b96ec960f0bf63"
+    },
+    "SECURITY.md": {
+      "bytes": 1185,
+      "sha256": "93abbd568dfc106902999a5f616dac32fc94c1df70c5ed8addde4ab392e9ab03"
+    },
+    "SOURCES.md": {
+      "bytes": 816,
+      "sha256": "0b0a9b128bf4c291b5339da67d60b71eeb0e5b15140cb203fb9ef8593a1e8766"
+    },
+    "START.cmd": {
+      "bytes": 239,
+      "sha256": "60cf09e097d24337f52798bce9e9833f31bee5456f1ac86ea26f96557df36655"
+    },
+    "TUTORIAL.md": {
+      "bytes": 5506,
+      "sha256": "ead064c66c826913ac7ea8c00effece508a2eb46402fd532230071d43bf71088"
+    },
+    "TUTORIEL.fr.md": {
+      "bytes": 7031,
+      "sha256": "5d7355fcf7acf142c102ae7b033c0a67d79299661b0f0ec10871c4bcb40ef07d"
+    },
+    "VALIDATION.md": {
+      "bytes": 2428,
+      "sha256": "6b325277b5272fb72fb7a51dba2b0e2d8f6279ae33c03ea66d8ea1d91fbe948e"
+    },
+    "did_talisman.py": {
+      "bytes": 39474,
+      "sha256": "8c39696455489fad8b0cd9b7b7c6625da2d73dce14e26401a4f9db8f7c6844d1"
+    },
+    "docs/images/import-en.jpg": {
+      "bytes": 105913,
+      "sha256": "5c20108ade9db63116a9a9f7a55b3ffde9d20f45331bea387e03b2f3c1fd46bb"
+    },
+    "docs/images/import-fr.jpg": {
+      "bytes": 111274,
+      "sha256": "b882f248e95be0a2d8f93ab269047e1af96f5e0c3b66c1fa255f0a5893b26b1b"
+    },
+    "export_ed25519.cjs": {
+      "bytes": 4352,
+      "sha256": "d38990fcf7a4f60031d7a706cf4a9a909445dff9196a72933f8bb09dafe80be2"
+    },
+    "package-lock.json": {
+      "bytes": 12710,
+      "sha256": "674867746f397418c3dacdf53a00e525bc9d094a2c57a0bf664e9f232c4567ae"
+    },
+    "package.json": {
+      "bytes": 472,
+      "sha256": "efe7e65ae0bc34bdd1d0931d5ebf17df24d8cf7d9822982ade8ff467158f3ce9"
+    },
+    "requirements.lock.txt": {
+      "bytes": 12709,
+      "sha256": "4a4ff6785a2357f7b732564c1f752c9bf8ca444566b5ad3ca7fad47f8c8a3c4c"
+    },
+    "requirements.txt": {
+      "bytes": 21,
+      "sha256": "c954d83fdeeeb9c0982a56c4aea3fc0fd3ab0f225e2c3e707c8fa4eff82ffa54"
+    },
+    "tests/test_import.py": {
+      "bytes": 12827,
+      "sha256": "d786beaa5f6bbb713e9335759712e028437e88a5dbd3b4fa6ff98195ce8f933c"
+    }
+  },
+  "project": "did-to-talisman",
+  "repository": "https://github.com/AMCONSEIL/did-to-talisman",
+  "schema": "did-to-talisman-source-manifest-v1",
+  "source_commit": "8c35ee3f089c26137f81932ff87893c6bf0d5206",
+  "source_tree": "2b66feb29772b385c23853903a102497efb65476",
+  "version": "0.1.1"
+}

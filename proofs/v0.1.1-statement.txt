@@ -1,0 +1,12 @@
+DID-TO-TALISMAN-AUTHORSHIP-V1
+{
+  "author_did": "did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD",
+  "project": "did-to-talisman",
+  "purpose": "I attest this project contribution under my personal DID.",
+  "repository": "https://github.com/AMCONSEIL/did-to-talisman",
+  "scope": "Only the source files listed in this manifest at the identified commit.",
+  "source_commit": "8c35ee3f089c26137f81932ff87893c6bf0d5206",
+  "source_manifest_sha256": "c609c92aca03495735e698d62151b517dd329a52dabf41b25a78c52f0ed51b37",
+  "source_tree": "2b66feb29772b385c23853903a102497efb65476",
+  "version": "0.1.1"
+}

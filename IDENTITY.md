@@ -1,29 +1,46 @@
-# Author and version attribution
+# Author and signed version attribution
 
 Author / porteur : **Julien — AMCONSEIL**
 GitHub: https://github.com/AMCONSEIL
 Author DID: **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 
-This is a personal community contribution. This DID identifies the author; it is never the user's default conversion identity.
+This is a personal community contribution. The author DID is not a default conversion identity; each user provides their own DID.
 
-## Signature status / statut de signature
+## Verified attribution / attribution vérifiée
 
-**PUBLIC TEST VERSION — DID SIGNATURE PENDING.**
+**The attribution signature is verified for version 0.1.1 at source commit [8c35ee3f089c26137f81932ff87893c6bf0d5206](https://github.com/AMCONSEIL/did-to-talisman/commit/8c35ee3f089c26137f81932ff87893c6bf0d5206).**
 
 Repository: https://github.com/AMCONSEIL/did-to-talisman
 
-Authorship is declared under the DID above. A cryptographic attribution signature for this new project is not yet published; do not present this as a signed release.
+The holder of the personal DID approved the exact version statement in Talisman. The Ed25519 signature and the signed source manifest were independently checked before publication.
 
-A README mention is a declaration, not a signature. A signed proof for a different project does not authenticate this tool.
+- [Public attribution proof](proofs/v0.1.1-attribution.json)
+- [Exact statement](proofs/v0.1.1-statement.txt)
+- [Source manifest: 24 files](proofs/v0.1.1-source-manifest.json)
+- Manifest SHA256: c609c92aca03495735e698d62151b517dd329a52dabf41b25a78c52f0ed51b37
 
-Before a signed stable release:
+The signed message begins with the domain separator **DID-TO-TALISMAN-AUTHORSHIP-V1** and binds the author DID, repository, version, complete source commit, Git tree and manifest digest.
 
-1. Freeze the source version and compute its file manifest.
-2. Prepare a statement naming this project, author DID, exact repository URL, full commit hash and manifest digest.
-3. Have the author review and sign that statement with their existing local signer. Never send private material to the assistant, website or repository.
-4. Verify the signature against the DID public key and retain the exact signed bytes and public proof.
-5. Publish the proof alongside the identified version; re-sign new versions.
+Talisman signed using the Substrate bytes wrapper. The exact signed bytes are the UTF-8 bytes of the literal prefix **&lt;Bytes&gt;**, followed by the complete statement, followed by the literal suffix **&lt;/Bytes&gt;**. The proof records this as **substrate-bytes**. It is a message signature, not a funds-transfer transaction.
 
-Generated candidate manifests and pending-signature records are kept with local packages, not committed as source. They are not signed proofs or independently authenticated timestamps.
+## Verify locally
 
-A valid signature proves key control and approval of the statement, not independently development priority, code quality or reward eligibility. Private keys, wallet exports, passwords and personal configuration do not belong in this project.
+After installing the project's dependencies, run in PowerShell:
+
+**.\.venv\Scripts\python.exe verify_attribution.py**
+
+This verifies the exact statement, manifest digest, expected personal DID and Ed25519 signature without accessing a wallet, private key or network.
+
+If the repository was cloned with Git, also verify all source file hashes in the signed commit:
+
+**.\.venv\Scripts\python.exe verify_attribution.py --check-source**
+
+The manifest uses **Git blob bytes**. Windows launchers may be exported with CRLF according to .gitattributes; the Git-source check reads the committed blobs rather than a platform-normalized working copy.
+
+## Scope and limits
+
+The proof covers the source commit above and its listed files. The later commit that adds this proof and verifier is not circularly claimed as signed. Future source versions need their own attribution statement.
+
+A valid signature establishes control of the DID key and approval of the attribution statement. It does not independently establish development priority, a security audit, FLOP representation, rewards or a trusted timestamp. The independent Talisman user test described in VALIDATION.md remains separate.
+
+This public proof contains only a message, public identity and signature. It does not contain the wallet backup, private key, seed, password or an API credential.
