@@ -6,6 +6,8 @@ Author DID: **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 
 This is a personal community contribution. The author DID is not a default conversion identity; each user provides their own DID.
 
+**Current guided-onboarding version: 0.2.0.** The proof below remains valid for its identified 0.1.1 source commit; it does not cover the later onboarding changes. The same personal author DID is retained.
+
 ## Verified attribution / attribution vérifiée
 
 **The attribution signature is verified for version 0.1.1 at source commit [8c35ee3f089c26137f81932ff87893c6bf0d5206](https://github.com/AMCONSEIL/did-to-talisman/commit/8c35ee3f089c26137f81932ff87893c6bf0d5206).**

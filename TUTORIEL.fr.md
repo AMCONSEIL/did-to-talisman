@@ -5,13 +5,28 @@
 Auteur : **Julien / AMCONSEIL**
 DID d'auteur : **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 
-## 1. Préparer son identité
+## 1. Choisir son parcours, sans supposer un format
 
-Avoir **son propre DID public did:key Ed25519**, la **sauvegarde PEM PKCS8 chiffrée de sa clé existante** et son mot de passe. Le DID public seul ne suffit pas.
+Un DID est un identifiant public. Selon l'outil utilisé, sa clé peut rester dans un wallet, un fichier chiffré ou un autre dispositif. Sa création ne donne pas automatiquement un PEM.
 
-Si cette identité est déjà disponible dans Talisman et peut signer, aucun nouvel import n'est nécessaire. Pour un autre format de sauvegarde, il faut un adaptateur testé ; renommer le fichier en .pem ne le convertit pas.
+| Ce que vous avez | Suite adaptée |
+|---|---|
+| La même identité est déjà dans un wallet capable de signer | Pas de conversion nécessaire ; conserver cet accès. Un compte Watch-only ne suffit pas. |
+| Un DID did:key Ed25519, son PEM PKCS8 chiffré et son mot de passe | Suivre le parcours PEM puis ouvrir le formulaire. |
+| Un JSON de wallet Polkadot/Talisman compatible | Importer directement dans Talisman via + / Import / JSON file avec le mot de passe de cet export. |
+| Seulement un DID public ou un JSON décrivant ce DID | Ce n'est pas une sauvegarde de clé. Retrouver l'outil d'origine. |
+| Fichier ou mot de passe perdu | Retrouver ses sauvegardes privées ou un wallet qui peut encore signer ; suivre la récupération officielle de l'outil d'origine si elle existe. |
+| Un autre format ou une clé non exportable | Consulter les instructions de l'outil d'origine ; renommer le fichier en .pem ne le convertit pas. |
 
-Préserver la sauvegarde d'origine. Le DID et sa clé restent identiques, mais Talisman recevra une copie de cette clé. Le logiciel ne génère pas d'identité de remplacement.
+**Où chercher le DID ?** Dans le profil ou les paramètres d'identité de l'outil d'origine. Copier le DID complet, pas celui de l'auteur affiché en bas de notre fenêtre.
+
+**Où chercher le PEM ?** Dans le dossier choisi à l'époque, vos sauvegardes privées ou votre support de sauvegarde. Le nom dépend de votre outil. Un téléchargement GitHub ne contient pas votre sauvegarde personnelle.
+
+**Quel mot de passe ?** Celui choisi lorsque ce PEM a été chiffré. Il n'est pas créé par le DID, ni récupérable depuis son texte public. Il est distinct du nouveau mot de passe d'export et du déverrouillage Talisman. Vérifier vous-même l'endroit où vous l'aviez conservé ou votre gestionnaire de mots de passe.
+
+**Notre ancien signataire peut-il aider ?** Si vous utilisiez déjà [Technocore Local Signer](https://github.com/AMCONSEIL/technocore-local-signer), ouvrir votre installation existante sans signer ni publier. Ses champs peuvent afficher le DID et le chemin de clé déjà configurés. Vérifier que le fichier existe vraiment. Le signataire n'enregistre pas la passphrase ; installer une copie neuve ne récupère rien. Son installation n'est pas obligatoire pour ce convertisseur.
+
+Si vous n'avez jamais créé cette identité, ce kit ne la crée pas pour vous. Ne remplacez pas silencieusement une ancienne identité par une nouvelle pour contourner une sauvegarde manquante. Aucun PEM, JSON privé ou mot de passe ne doit être transmis au support.
 
 ## 2. Installer sous Windows
 
@@ -29,7 +44,9 @@ Après installation, la conversion peut être effectuée sans connexion Internet
 
 ## 3. Vérifier le DID public
 
-Double-cliquer sur **LANCER.cmd**. Les boutons **FR / EN** dans la fenêtre permettent ensuite de changer de langue sans perdre la saisie.
+![Les trois éléments expliqués avant le formulaire](docs/images/onboarding-pem-fr.jpg)
+
+Double-cliquer sur **LANCER.cmd**, choisir sa situation dans le guide, puis le format PEM si applicable. Lire les trois explications et confirmer que le DID, le PEM correspondant et son mot de passe sont disponibles pour accéder au formulaire. Les boutons **FR / EN** dans la fenêtre permettent ensuite de changer de langue sans perdre la saisie.
 
 ![Formulaire réel, sans donnée utilisateur](docs/images/import-fr.jpg)
 

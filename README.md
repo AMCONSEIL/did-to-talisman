@@ -1,6 +1,6 @@
 # DID → Talisman
 
-**Public test version 0.1.1 — Windows · English / Français.**
+**Public test version 0.2.0 — Windows · English / Français.**
 
 [Download ZIP](https://github.com/AMCONSEIL/did-to-talisman/archive/refs/heads/main.zip) · [Report an issue](https://github.com/AMCONSEIL/did-to-talisman/issues)
 
@@ -8,21 +8,29 @@
 
 [Français](README.fr.md) · [Full tutorial](TUTORIAL.md) · [Attribution](IDENTITY.md)
 
-![English interface](docs/images/import-en.jpg)
+![Guided onboarding](docs/images/onboarding-en.jpg)
 
 Convert your **encrypted Ed25519 PEM backup** into an **encrypted Polkadot JSON v3** account for Talisman. The tool checks the key against your DID, restores the export and verifies a signature before confirming success.
+
+Before installing: if your identity already works in a wallet or you have a compatible wallet JSON, read [which path to choose](TUTORIAL.md#1-choose-a-path-without-assuming-a-backup-format). PEM conversion may be unnecessary.
 
 ## Windows quick start
 
 1. Install [Python 3.11+ with Tcl/Tk](https://www.python.org/downloads/windows/) and [Node.js 22+](https://nodejs.org/en/download).
 2. Extract the complete project and run **INSTALLER_WINDOWS.cmd**. Setup downloads locked public dependencies; it reads no wallet.
-3. Run **START.cmd** for English or **LANCER.cmd** for French. Enter your DID, select your encrypted backup, choose an export password and private destination, then create the export.
+3. Run **START.cmd** for English or **LANCER.cmd** for French. Choose your situation in the guide. The PEM form opens only after you confirm you have the required items.
 
 Use the **FR / EN** buttons in the window to switch languages without clearing your inputs.
 
 Conversion works offline after setup. No identity is prefilled and no existing wallet, balance or chain is modified.
 
 **Supported first version: Windows; complete base58btc Ed25519 did:key; encrypted PKCS8 PEM.** Other DID/key methods, pasted seeds, OpenSSH files, hardware/non-exportable wallets and unencrypted PEM are unsupported. A public DID alone cannot recover its key.
+
+## Before the form
+
+The FR/EN guide distinguishes an identity already in a wallet, a PEM backup, a compatible wallet JSON and a missing backup/password. It explains where to locate each item. A public DID does not automatically provide a PEM. A compatible Polkadot/Talisman wallet JSON can import directly; a public DID document in JSON is not a key backup. The guide reads no private file.
+
+**Technocore Local Signer is optional.** Its existing configured interface may show your DID and key path. Downloading a fresh copy provides no personal key, backup or password. Its documentation opens only when you click the explicit GitHub link.
 
 Each successful operation creates a new **DID-Talisman-…** folder with:
 

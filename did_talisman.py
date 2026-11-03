@@ -14,7 +14,7 @@ import subprocess
 import threading
 from datetime import datetime, timezone
 
-VERSION = "0.1.1"
+VERSION = "0.2.0"
 AUTHOR_DID = "did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD"
 BASE = Path(__file__).resolve().parent
 ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
@@ -523,6 +523,8 @@ class ImportWindow:
         ttk.Label(footer, text=AUTHOR_DID, style="Footer.TLabel").pack(anchor="w")
         self.fields["did"].trace_add("write", self.did_changed)
         self.switch_language(lang)
+        from onboarding import Onboarding
+        self.onboarding = Onboarding(self, (self.identity_card, self.details, consent_row, actions, status_frame))
 
     def label(self, parent, key, style, **kwargs):
         widget = self.ttk.Label(parent, text=self.text[key], style=style, **kwargs)
@@ -567,6 +569,8 @@ class ImportWindow:
 
     def resize(self, event):
         self.canvas.itemconfigure(self.page_id, width=event.width)
+        if hasattr(self, "onboarding"):
+            self.onboarding.resize(event.width)
         self.intro_label.configure(wraplength=max(380, event.width-220))
         self.consent_label.configure(wraplength=max(400, event.width-100))
         self.status_label.configure(wraplength=max(400, event.width-72))
@@ -598,6 +602,8 @@ class ImportWindow:
             button.configure(style="Selected.TButton" if code == lang else "Language.TButton")
         self.update_public()
         self.set_status(self.status_kind, self.status_payload)
+        if hasattr(self, "onboarding"):
+            self.onboarding.refresh()
 
     def did_changed(self, *_):
         if self.verified_identity and self.fields["did"].get().strip() != self.verified_identity["did"]:
@@ -655,6 +661,9 @@ class ImportWindow:
 
     def start_export(self):
         if self.busy:
+            return
+        if hasattr(self, "onboarding") and not self.onboarding.form_visible:
+            self.onboarding.show("start")
             return
         if not self.consent.get():
             self.set_status("consent_missing")

@@ -243,6 +243,9 @@ class ImportTests(unittest.TestCase):
         root.withdraw()
         try:
             view = app.ImportWindow(root, "en")
+            view.onboarding.show("pem")
+            view.onboarding.ready.set(True)
+            view.onboarding.open_form()
             root.geometry("780x640")
             root.deiconify()
             root.update()

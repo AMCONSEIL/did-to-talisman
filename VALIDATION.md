@@ -1,4 +1,4 @@
-# Validation — 0.1.1 public test version
+# Validation — 0.2.0 public test version
 
 ## Checked
 
@@ -37,3 +37,7 @@ Original personal tools are preserved. Rollback for this isolated addition is to
 The original 17 importer/UI tests are supplemented by 7 public-fixture attribution tests: raw and Substrate-wrapped Ed25519 signatures, modified message, modified manifest, other identity, altered signature and another repository.
 
 The actual personal DID signature was verified against the exact statement and all 24 Git source blobs of commit 8c35ee3f089c26137f81932ff87893c6bf0d5206. This proof does not alter the importer or replace its independent real user test.
+
+## Guided onboarding checks
+
+Six additional tests cover hidden initial form, all navigation branches without export, explicit PEM readiness separate from export consent, language switching preserving route/readiness/inputs, non-PEM paths refusing form access, and no implicit browser opening. Together with the 24 existing checks this gives 30 tests. No private signer configuration or backup is read.

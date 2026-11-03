@@ -5,11 +5,28 @@
 Author: **Julien / AMCONSEIL**
 Author DID: **did:key:z6Mkt3DNtpGBNh1KHYwLQEk6QtCcJ7vVaRPze1SU7MyhFMVD**
 
-## 1. Prerequisites
+## 1. Choose a path without assuming a backup format
 
-Have **your own Ed25519 did:key**, its **existing encrypted PKCS8 PEM backup**, and the backup password. A public DID cannot recover its private key.
+A DID is a public identifier. Its key may remain in a wallet, encrypted file or another device. Creating a DID does not automatically give you a PEM.
 
-If this identity already works in Talisman and can sign, skip conversion. Other source formats need a tested adapter; renaming a file to .pem does not convert it. No replacement identity is generated. Preserve the original backup; importing gives Talisman a copy of the same key.
+| What you have | Appropriate next step |
+|---|---|
+| The same identity in a wallet that can sign | No conversion required. Preserve that access; Watch-only is insufficient. |
+| Ed25519 did:key, its encrypted PKCS8 PEM and password | Follow the PEM path, then open the conversion form. |
+| A compatible Polkadot/Talisman wallet JSON | Import directly using + / Import / JSON file and that export's password. |
+| Only a public DID or a JSON DID document | This is not a key backup. Locate the original tool. |
+| A missing backup or password | Check private backups or a wallet that can still sign; follow the original tool's official recovery process if available. |
+| Another format or a non-exportable key | Consult the original tool. Renaming a file to .pem does not convert it. |
+
+**Where is the DID?** In the original tool's identity profile/settings. Copy your own complete identifier, not the author's DID in this app's footer.
+
+**Where is the PEM?** In the folder chosen when you saved it, your private backups or backup drive. The filename depends on the original tool. Downloading a GitHub project does not include your personal backup.
+
+**Which password?** The password chosen when that PEM was encrypted, not the new export password or Talisman unlock password. Check where you stored it or your password manager yourself. It cannot be derived from the public DID.
+
+**Does our previous signer help?** If you already used [Technocore Local Signer](https://github.com/AMCONSEIL/technocore-local-signer), open your existing installation without signing or publishing. Its fields may display the configured DID and key path. Check the file actually exists. The signer does not store the passphrase; downloading a fresh copy cannot recover it. Installing it is optional.
+
+This kit does not create an identity for someone who never had one. Do not silently replace an old identity with a new one to work around a missing backup. Never send private PEM/JSON files or passwords to support.
 
 ## 2. Windows setup
 
@@ -26,7 +43,7 @@ After setup, conversion works without an Internet connection.
 
 ## 3. Check your public DID
 
-Run **START.cmd** for English, or **LANCER.cmd** for French. Switch languages at any time with **FR / EN** in the window; your inputs are preserved. Enter **your DID**, not the author's DID in this guide, then click **Check DID**.
+Run **START.cmd** for English, or **LANCER.cmd** for French. Choose your situation, then the PEM format if applicable. Read the three explanations and confirm that you have the matching DID, encrypted PEM and its password before opening the form. Switch languages at any time with **FR / EN** in the window; your inputs are preserved. Enter **your DID**, not the author's DID in this guide, then click **Check DID**.
 
 The tool shows its public key and generic **SS58 42** Substrate address. This step reads no backup and signs nothing. Other DID methods, incomplete identifiers and fragments are refused.
 
