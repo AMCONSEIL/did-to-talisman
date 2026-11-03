@@ -1,0 +1,22 @@
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+validation.local/
+dist/
+exports/
+*.pem
+*.key
+*.p12
+*.pfx
+account.json
+verification.public.json
+DID-Talisman-*/
+.env
+.env.*
+*.log
+*.zip
+
+# Generated release records are distributed with packages, not source.
+release-manifest.public.json
+attribution-pending.public.json
